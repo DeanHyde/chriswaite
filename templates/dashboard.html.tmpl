@@ -43,19 +43,19 @@
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
+          <li class="nav-item {{ if eq .Path "home" }} active {{ end }}">
             <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item {{ if eq .Path "services" }} active {{ end }}">
             <a class="nav-link" href="/services">Services</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item {{ if eq .Path "gallery" }} active {{ end }}">
             <a class="nav-link" href="/gallery">Gallery</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item {{ if eq .Path "faq" }} active {{ end }}">
             <a class="nav-link" href="faq">FAQ</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item {{ if eq .Path "contact" }} active {{ end }}">
             <a class="nav-link" href="contact-us">Contact Us</a>
           </li>
         </ul>

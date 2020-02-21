@@ -7,6 +7,10 @@ import (
 	"github.com/DeanHyde/chriswaite/libhttp"
 )
 
+type Url struct {
+	Path string
+}
+
 func GetHome(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/html")
 
@@ -16,7 +20,8 @@ func GetHome(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	tmpl.Execute(w, nil)
+	urlData := Url{"home"}
+	tmpl.ExecuteTemplate(w, "dashboard.html.tmpl", urlData)
 }
 
 func GetServices(w http.ResponseWriter, r *http.Request) {
@@ -28,7 +33,8 @@ func GetServices(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	tmpl.Execute(w, nil)
+	urlData := Url{"services"}
+	tmpl.ExecuteTemplate(w, "dashboard.html.tmpl", urlData)
 }
 
 func GetGallery(w http.ResponseWriter, r *http.Request) {
@@ -40,7 +46,8 @@ func GetGallery(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	tmpl.Execute(w, nil)
+	urlData := Url{"gallery"}
+	tmpl.ExecuteTemplate(w, "dashboard.html.tmpl", urlData)
 }
 
 func GetFaq(w http.ResponseWriter, r *http.Request) {
@@ -52,7 +59,8 @@ func GetFaq(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	tmpl.Execute(w, nil)
+	urlData := Url{"faq"}
+	tmpl.ExecuteTemplate(w, "dashboard.html.tmpl", urlData)
 }
 
 func GetContactUs(w http.ResponseWriter, r *http.Request) {
@@ -64,5 +72,6 @@ func GetContactUs(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	tmpl.Execute(w, nil)
+	urlData := Url{"contact"}
+	tmpl.ExecuteTemplate(w, "dashboard.html.tmpl", urlData)
 }
