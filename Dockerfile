@@ -12,11 +12,13 @@ ENV HTTP_DRAIN_INTERVAL 1s
 ENV COOKIE_SECRET wGTXafrku2fTihQV
 
 # Replace this with actual PostgreSQL DSN.
-ENV DSN postgres://dean@localhost:5432/chriswaite?sslmode=disable
+# ENV DSN postgres://dean@localhost:5432/chriswaite?sslmode=disable
 
 WORKDIR /go/src/github.com/DeanHyde/chriswaite
 
-RUN godep go build
+RUN go get
+
+RUN go build
 
 EXPOSE 8888
 CMD ./chriswaite
