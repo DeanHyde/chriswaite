@@ -40,7 +40,7 @@ func GetServices(w http.ResponseWriter, r *http.Request) {
 func GetGallery(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/html")
 
-	tmpl, err := template.ParseFiles("templates/dashboard.html.tmpl", "templates/gallery.html.tmpl")
+	tmpl, err := template.ParseFiles("templates/dashboard.html.tmpl", "templates/gallery2.html.tmpl")
 	if err != nil {
 		libhttp.HandleErrorJson(w, err)
 		return
