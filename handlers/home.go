@@ -1,6 +1,7 @@
 package handlers
 
 import (
+	"fmt"
 	"html/template"
 	"net/http"
 
@@ -66,7 +67,7 @@ func GetFaq(w http.ResponseWriter, r *http.Request) {
 func GetContactUs(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/html")
 
-	tmpl, err := template.ParseFiles("templates/dashboard.html.tmpl", "templates/home.html.tmpl")
+	tmpl, err := template.ParseFiles("templates/dashboard.html.tmpl", "templates/contact.html.tmpl")
 	if err != nil {
 		libhttp.HandleErrorJson(w, err)
 		return
@@ -74,4 +75,27 @@ func GetContactUs(w http.ResponseWriter, r *http.Request) {
 
 	urlData := Url{"contact"}
 	tmpl.ExecuteTemplate(w, "dashboard.html.tmpl", urlData)
+}
+
+func PostSendMessage(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "text/html")
+
+	name := r.FormValue("name")
+	email := r.FormValue("email")
+	subject := r.FormValue("subject")
+	message := r.FormValue("message")
+
+	fmt.Fprintf(w, "Name: %q<br />", name)
+	fmt.Fprintf(w, "Email: %q<br />", email)
+	fmt.Fprintf(w, "Subject: %q<br />", subject)
+	fmt.Fprintf(w, "Message: %q<br />", message)
+
+	// tmpl, err := template.ParseFiles("templates/dashboard.html.tmpl", "templates/contact.html.tmpl")
+	// if err != nil {
+	// 	libhttp.HandleErrorJson(w, err)
+	// 	return
+	// }
+
+	// urlData := Url{"contact"}
+	// tmpl.ExecuteTemplate(w, "dashboard.html.tmpl", urlData)
 }

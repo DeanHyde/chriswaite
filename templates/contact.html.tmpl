@@ -1,0 +1,110 @@
+{{define "content"}}
+<main role="main">
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-5 text-center">Contact Us</h1>
+      <p class="text-center">Do you have any questions? Do not hesitate to contact us directly.</p>
+      <p class="text-center">We will come back to you within a matter of hours to help you.</p>
+    </div>
+  </div>
+
+  <div class="container">
+  <!--Section: Contact v.2-->
+<section class="mb-4">
+
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-md-9 mb-md-0 mb-5">
+            <form id="contact-form" name="contact-form" action="send-message" method="POST">
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <label for="name" class="mt-2">Your name:</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                    <!--Grid column-->
+                    <div class="col-md-6">
+                        <div class="md-form mb-0">
+                            <label for="email" class="mt-2">Your email address:</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                    </div>
+                    <!--Grid column-->
+
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <label for="subject" class="mt-2">Subject:</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid row-->
+
+                <!--Grid row-->
+                <div class="row">
+
+                    <!--Grid column-->
+                    <div class="col-md-12">
+
+                        <div class="md-form">
+                            <label for="message" class="mt-2">Your message:</label>
+                            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea" required></textarea>
+                        </div>
+
+                    </div>
+                </div>
+                <!--Grid row-->
+
+              <div class="text-center text-md-left mt-4">
+                <input type="submit" class="btn btn-primary" value="Send Message" />
+                  <!-- <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();"><i class="fas fa-paper-plane mr-2"></i>Send Message</a> -->
+              </div>
+              <div class="status"></div>
+
+            </form>
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-md-3 text-center">
+            <ul class="list-unstyled mb-0">
+            <!--
+                <li><i class="fas fa-map-marker-alt fa-2x"></i>
+                    <p>San Francisco, CA 94126, USA</p>
+                </li>
+            -->
+                <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                    <p class="mt-2">07545 330852</p>
+                </li>
+                <hr />
+                <li><i class="fas fa-envelope mt-2 fa-2x"></i>
+                    <p class="mt-2">chris@cwaitetreesurgery.co.uk</p>
+                </li>
+            </ul>
+        </div>
+        <!--Grid column-->
+
+    </div>
+
+</section>
+<!--Section: Contact v.2-->
+  </div> <!-- /container -->
+
+</main>
+
+{{end}}

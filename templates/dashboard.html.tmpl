@@ -37,28 +37,28 @@
 
   <body>
 
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
       <a class="navbar-brand" href="#">Cotswold Tree Felling</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon"></span> <span class='navbar-menu-text'>Nav Menu</span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item {{ if eq .Path "home" }} active {{ end }}">
-            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/"><i class="fas fa-home mr-2"></i> Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item {{ if eq .Path "services" }} active {{ end }}">
-            <a class="nav-link" href="/services">Services</a>
+            <a class="nav-link" href="/services"><i class="fas fa-list mr-2"></i> Services</a>
           </li>
           <li class="nav-item {{ if eq .Path "gallery" }} active {{ end }}">
-            <a class="nav-link" href="/gallery">Gallery</a>
+            <a class="nav-link" href="/gallery"><i class="fas fa-images mr-2"></i> Gallery</a>
           </li>
           <li class="nav-item {{ if eq .Path "faq" }} active {{ end }}">
-            <a class="nav-link" href="faq">FAQ</a>
+            <a class="nav-link" href="faq"><i class="fas fa-question-circle mr-2"></i> FAQ</a>
           </li>
           <li class="nav-item {{ if eq .Path "contact" }} active {{ end }}">
-            <a class="nav-link" href="contact-us">Contact Us</a>
+            <a class="nav-link" href="contact-us"><i class="fas fa-id-card mr-2"></i> Contact Us</a>
           </li>
         </ul>
         <div class="my-2 my-lg-0 nav-right">
