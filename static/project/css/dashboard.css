@@ -15,13 +15,17 @@ hr {
     background-image: url('../img/wood.jpg');
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: #e3d0b0;
     border-bottom: #322c1f !important;
     border-bottom-width: 2px !important;
     border-bottom-style: dashed !important;
     border-top: #322c1f !important;
     border-top-width: 2px !important;
     border-top-style: dashed !important;
+}
+
+.jumbotron i {
+    margin-left: -70px !important;
 }
 
 .jumbotron > .container {
@@ -54,6 +58,12 @@ hr {
 .navbar-toggler-icon {
     display: table-cell;
 }
+.navbar-dark .navbar-brand {
+    color: #e3d0b0;
+}
+.navbar-dark .navbar-brand:hover {
+    color: #eedec2;
+}
 
 .navbar-menu-text {
     display: table-cell;
@@ -76,7 +86,7 @@ hr {
 }
 
 .nav-right a:link, a:visited {
-    color: #ccc;
+    color: #e3d0b0;
 }
 
 .nav-right a:hover {
@@ -85,27 +95,61 @@ hr {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.4);
+    color: #8b795d;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #e3d0b0;
 }
 
 .navbar-nav .nav-item {
     padding: 0 10px;
 }
 
+.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show>.nav-lin {
+    color: #e3d0b0;
+}
+
+.navbar-nav a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
 .navbar-nav .nav-item:not(:last-child) {
     border-right: 1px dashed #3c2a00;
+}
+.nav-right span:not(:last-child) {
+    border-right: 1px dashed #3c2a00;
+    padding-right: 10px;
 }
 
 @media (max-width: 768px) {
     .navbar-nav .nav-item:not(:last-child) {
         border-right: none;
     }
+    .nav-right span:not(:last-child) {
+        border-right: none;
+    }
 }
+
 /* Buttons */
 
-.btn-primary, .btn-primary:active {
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle,
+.btn-primary, .btn-primary:active, .btn-primary:focus {
     background-color: rgb(50, 44, 33);
     border-color: rgb(53, 45, 30);
+}
+
+.btn-primary.focus, .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgb(93, 65, 4);
+}
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .show>.btn-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgb(93, 65, 4);
 }
 
 .btn-primary:hover {
